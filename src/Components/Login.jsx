@@ -1,13 +1,10 @@
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
-  const logOut = () => {
-    googleLogout();
-    console.log("Log out successfully");
-  };
+  
   return (
     <div>
       {/* Login page */}
@@ -16,8 +13,8 @@ const Login = () => {
         <div className=" flex flex-col px-10 py-5 items-center gap-5 ">
           {/* Instagram Heading */}
           <div
-            className=" w-full flex items-center justify-center h-15 cursor-pointer"
-            onClick={logOut}
+            className=" w-full flex items-center justify-center h-15 cursor-pointer "
+            
           >
             <h1 className="text-4xl satisfy-regular ">Unstagram</h1>
           </div>
@@ -62,7 +59,7 @@ const Login = () => {
             onSuccess={(credentialResponse) => {
               console.log(jwtDecode(credentialResponse.credential));
               localStorage.setItem("isLoggedIn", true);
-              navigate("/home");
+              navigate("/");
             }}
             onError={() => {
               console.log("Login Failed");

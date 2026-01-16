@@ -7,7 +7,6 @@ import ProtectedRoute  from "./ProtectedRoute/ProtectedRoute.jsx";
 
 const App = () => {
   
-  // const navigate = useNavigate()
   return (
     <div>
       <Routes>
