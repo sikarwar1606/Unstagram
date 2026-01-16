@@ -1,21 +1,15 @@
 import React, { use } from "react";
 import { googleLogout } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
+import Header from "./Header";
+import StorySection from "./StorySection";
 
 const Home = () => {
-  // Using useNavigate hook to navigate programmatically
-  const navigate = useNavigate();
-  // This function will handle logout
-  const Logout = () => {
-    googleLogout();
-    navigate("/login");
-  };
+
   return (
     <div>
-      This is the home page
-      <button className="cursor-pointer" onClick={Logout}>
-        LogOut
-      </button>
+      <Header />
+      <StorySection />
     </div>
   );
 };
