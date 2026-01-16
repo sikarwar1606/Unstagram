@@ -61,6 +61,7 @@ const Login = () => {
           <GoogleLogin
             onSuccess={(credentialResponse) => {
               console.log(jwtDecode(credentialResponse.credential));
+              localStorage.setItem("isLoggedIn", true);
               navigate("/home");
             }}
             onError={() => {
