@@ -16,7 +16,7 @@ const Home = () => {
       </div>
 
       {/* Story Section */}
-      <div className="border-b border-gray-800">
+      <div className=" border-gray-800">
         <StorySection />
       </div>
 
