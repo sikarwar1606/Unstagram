@@ -21,7 +21,12 @@ const Home = () => {
       </div>
 
       {/* Main Content (Scrollable) */}
-      <div className="flex-1 overflow-y-auto no-scrollbar px-2 ">
+      {/* <div className="flex-1 overflow-y-auto overflow-x-hidden no-scrollbar scroll-smooth snap-y snap-mandatory gap-2"> */}
+      <div
+      className="
+        flex-1 items-center  overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory no-scrollbar border
+      "
+    >
         <Content />
         <Content />
         <Content />
@@ -39,22 +44,5 @@ const Home = () => {
   );
 };
 
-
-// const Home = () => {
-
-//   return (
-//     <div className="">
-//       <Header />
-//       <StorySection />
-//       <Content />
-//       <Content />
-//       <Content />
-//       <Content />
-//       <Content />
-//       <Content />
-//       <Navbar />
-//     </div>
-//   );
-// };
 
 export default Home;
