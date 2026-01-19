@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Login from "./Components/Login.jsx";
 import Home from "./Components/Home.jsx";
+import Reels from "./Components/Reels/Reels.jsx";
 import ProtectedRoute  from "./ProtectedRoute/ProtectedRoute.jsx";
 
 
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/login" element={<Login/>}/>
         <Route path="/" element={<ProtectedRoute><Home/></ProtectedRoute>}/>
+        <Route path="/reels" element={<ProtectedRoute><Reels/></ProtectedRoute>}/>
       </Routes>
     </div>
   );
