@@ -2,7 +2,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Login from "./Components/Login.jsx";
 import Home from "./Components/Home.jsx";
-import Reels from "./Components/Reels/Reels.jsx";
+import Reels from "./Components/Reels/ReelPage.jsx"
 import ProtectedRoute  from "./ProtectedRoute/ProtectedRoute.jsx";
 
 
