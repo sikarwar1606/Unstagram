@@ -46,6 +46,9 @@ const Content = () => {
               src={reel.src}              
               loop
               playsInline
+              onClick={(e)=>{
+                e.target.muted = !e.target.muted;
+              }}
             />
         </div>
       ))}
