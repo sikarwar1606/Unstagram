@@ -1,7 +1,9 @@
 import React from "react";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import {VolumeOff, Volume} from "lucide-react"
 
 const Content = () => {
+  const [Muted, setMuted] = useState(false)
   const reels = [
     { id: 1, src: "/video.mp4" },
     { id: 2, src: "/video2.mp4" },
@@ -46,10 +48,13 @@ const Content = () => {
               src={reel.src}              
               loop
               playsInline
+              muted={Muted}
               onClick={(e)=>{
-                e.target.muted = !e.target.muted;
+                setMuted(!Muted)
+                
               }}
             />
+            
         </div>
       ))}
     </div>
